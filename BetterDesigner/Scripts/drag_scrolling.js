@@ -3,14 +3,15 @@
 /*
 
 ------ PROBLEM ------  
- 
+- Navigating the designer area using scrollbars or the middle mouse button is difficult.  
+- The ability to drag tables creates an expectation that the entire area can be dragged to move.  
 
 ------ HOW TO REPLICATE ------  
- 
+Press and hold the left mouse button, then try to move the canvas area.  
 
 ------ FIX ------  
- 
- 
+Implement drag-scrolling events for smoother navigation.  
+
 */
 
 function applyDragScrolling() {

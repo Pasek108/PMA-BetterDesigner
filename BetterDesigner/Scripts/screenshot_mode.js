@@ -3,13 +3,34 @@
 /*
 
 ------ PROBLEM ------  
-
+There are two ways to export the ERD:  
+- Export an ugly SVG from the designer, which always uses direct relation connections and has the same appearance.  
+- Take a screenshot, but this only captures the visible screen area and loses quality if zoomed out in the browser.  
 
 ------ HOW TO REPLICATE ------  
-  
+Try to save the ERD image.  
 
 ------ FIX ------  
+Enable fullscreen mode for the canvas only, allowing screenshots of arbitrarily large ERDs while preserving 
+the same theme and relation styles as displayed.  
 
+How to Take a Screenshot:
+
+- Firefox: 
+  [Official Guide](https://support.mozilla.org/en-US/kb/take-screenshots-firefox)  
+  1. Open screenshot mode.  
+  2. Right-click on an empty part of the page to open the context menu.  
+  3. Select *Take Screenshot*.  
+  4. Click *Save full page*.  
+  OR  
+  1. Open screenshot mode.  
+  2. Use the keyboard shortcut `Ctrl + Shift + S`.  
+  3. Click *Save full page*.  
+
+- Edge / Chrome: 
+  1. Install the [GoFullPage](https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl) extension.  
+  2. Open screenshot mode.  
+  3. Click the GoFullPage extension icon and save your ERD.  
  
 */
 
