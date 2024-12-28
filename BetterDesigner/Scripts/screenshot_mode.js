@@ -11,10 +11,15 @@ There are two ways to export the ERD:
 Try to save the ERD image.  
 
 ------ FIX ------  
-Enable fullscreen mode for the canvas only, allowing screenshots of arbitrarily large ERDs while preserving 
+Add button for displaying only canvas on fullscreen, allowing screenshots of arbitrarily large ERDs while preserving 
 the same theme and relation styles as displayed.  
 
 How to Take a Screenshot:
+
+- Chrome / Edge: 
+  1. Install the [GoFullPage](https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl) extension.  
+  2. Open screenshot mode.  
+  3. Click the GoFullPage extension icon and save your ERD.  
 
 - Firefox: 
   [Official Guide](https://support.mozilla.org/en-US/kb/take-screenshots-firefox)  
@@ -26,11 +31,6 @@ How to Take a Screenshot:
   1. Open screenshot mode.  
   2. Use the keyboard shortcut `Ctrl + Shift + S`.  
   3. Click *Save full page*.  
-
-- Edge / Chrome: 
-  1. Install the [GoFullPage](https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl) extension.  
-  2. Open screenshot mode.  
-  3. Click the GoFullPage extension icon and save your ERD.  
  
 */
 
@@ -45,45 +45,15 @@ function screenshotMode() {
   if (!BetterDesigner.isOnDesignerPage()) return
   console.log("screenshot mode")
 
-  // styles for button
-  const style = document.createElement("style")
-
-  style.textContent = `
-    #name-panel {
-        position: relative;
-    }
-
-    #name-panel button.screenshot {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        aspect-ratio: 1;
-        margin: 0;
-        padding: 0;
-        border: 1px solid black;
-        background-color: rgba(0, 0, 0, 0);
-    }
-
-    #name-panel button.screenshot:hover {
-        background-color: rgba(0, 0, 0, 0.25);
-        cursor: pointer;
-    }
-
-    #name-panel button.screenshot img {
-        width: 1.25rem;
-        height: 1.25rem;
-    }
-  `
-
-  document.head.appendChild(style)
-
   // check if button exist
   const name_panel = document.querySelector("#name-panel")
   if (name_panel.querySelectorAll(".screenshot").length > 0) return
+
+  // styles for button
+  const link = document.createElement("link")
+  link.rel = "stylesheet"
+  link.href = "BetterDesigner/Styles/screenshot_mode.css"
+  document.head.appendChild(link)
 
   // create button
   const button = document.createElement("button")
@@ -94,9 +64,11 @@ function screenshotMode() {
   name_panel.appendChild(button)
 
   // create button icon
-  const icon = document.createElement("img")
-  icon.src = "BetterDesigner/camera-icon.png"
-  button.appendChild(icon)
+  setTimeout(() => {
+    const icon = document.createElement("img")
+    icon.src = "BetterDesigner/Images/camera-icon.png"
+    button.appendChild(icon)
+  }, 500)
 }
 
 function openScreenshotMode() {
@@ -107,12 +79,14 @@ function openScreenshotMode() {
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
-    z-index: 9999 !important;
+    z-index: 999 !important;
     min-width: 100vw !important;
     min-height: 100vh !important;
     background: white !important;
   `
   if (BetterDesigner.settings.drag_scrolling) BetterDesigner.canvas_node.style.setProperty("cursor", "grab", "important")
+
+  BetterDesigner.modal.openModal("screenshot_mode")
 }
 
 function closeScreenshotMode(e) {

@@ -38,7 +38,11 @@ function scrollingFix() {
 
   // collapsing navigation
   const navigation_collapser = document.getElementById("pma_navigation_collapser")
-  navigation_collapser.addEventListener("click", navigationCollapse)
+  navigation_collapser.addEventListener("click", () => setTimeout(resizeNavigation, 1))
+
+  // resizing navigation
+  const navigation_resizer = document.getElementById("pma_navigation_resizer")
+  navigation_resizer.addEventListener("mousedown", startNavigationResize)
 
   // fullscreen
   const observer = new MutationObserver(toggleFullscreen)
@@ -48,11 +52,6 @@ function scrollingFix() {
   let navigation_width = $("#pma_navigation").innerWidth()
   let menubar_height = $("#floating_menubar").innerHeight()
   let name_panel_height = $("#name-panel").innerHeight()
-
-  if (BetterDesigner.fullscreen) {
-    navigation_width = -3
-    menubar_height = 0
-  }
 
   // styles for body
   document.body.style.cssText = `
@@ -100,27 +99,37 @@ function scrollingFix() {
   })
 }
 
-function navigationCollapse() {
-  setTimeout(() => {
-    const navigation_width = $("#pma_navigation").innerWidth()
-    const menubar_height = $("#floating_menubar").innerHeight()
-    const name_panel_height = $("#name-panel").innerHeight()
+function startNavigationResize() {
+  document.body.style.setProperty("overflow", "hidden", "important")
+  document.addEventListener("mousemove", resizeNavigation)
+  document.addEventListener("mouseup", stopNavigationResize)
+}
 
-    BetterDesigner.canvas_node.style.cssText = `
-      overflow: scroll !important;
-      width: calc(100vw - ${navigation_width + 3}px) !important;
-      height: calc(100vh - ${menubar_height}px - ${name_panel_height}px) !important;
-      background: white !important;
-    `
-    if (BetterDesigner.settings.drag_scrolling) BetterDesigner.canvas_node.style.setProperty("cursor", "grab", "important")
+function resizeNavigation() {
+  const navigation_width = $("#pma_navigation").innerWidth()
+  const menubar_height = $("#floating_menubar").innerHeight()
+  const name_panel_height = $("#name-panel").innerHeight()
 
-    document.querySelector("#page_content").style.cssText = `
-      overflow: hidden !important;
-      width: calc(100vw - ${navigation_width + 3}px) !important;
-      height: calc(100vh - ${menubar_height}px) !important;
-      margin: 0 0 0 3px !important;
-    `
-  }, 1)
+  BetterDesigner.canvas_node.style.cssText = `
+    overflow: scroll !important;
+    width: calc(100vw - ${navigation_width + 3}px) !important;
+    height: calc(100vh - ${menubar_height}px - ${name_panel_height}px) !important;
+    background: white !important;
+  `
+  if (BetterDesigner.settings.drag_scrolling) BetterDesigner.canvas_node.style.setProperty("cursor", "grab", "important")
+
+  document.querySelector("#page_content").style.cssText = `
+    overflow: hidden !important;
+    width: calc(100vw - ${navigation_width + 3}px) !important;
+    height: calc(100vh - ${menubar_height}px) !important;
+    margin: 0 0 0 3px !important;
+  `
+}
+
+function stopNavigationResize() {
+  document.body.overflow = null
+  document.removeEventListener("mousemove", resizeNavigation)
+  document.removeEventListener("mouseup", stopNavigationResize)
 }
 
 function toggleFullscreen() {
@@ -136,7 +145,7 @@ function toggleFullscreen() {
     let name_panel_height = $("#name-panel").innerHeight()
 
     // show or hide the fullscreen mode button when toggling fullscreen
-    // opening screenshot mode in fullscreen can cause issues with scrolling and dragging 
+    // opening screenshot mode in fullscreen can cause issues with scrolling and dragging
     if (page_content.classList.contains("content_fullscreen")) {
       screenshot_mode_button.style.display = "none"
       navigation_width = -3

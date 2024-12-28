@@ -5,7 +5,7 @@ class BetterDesigner {
   static canvas_node = null
   static drag_target = window
   static drag_position = { top: 0, left: 0, x: 0, y: 0 }
-  static fullscreen = false
+  static modal = new Modal()
 
   static waitForDesigner() {
     console.log("wait")

@@ -1,11 +1,11 @@
 {
-    "table_dragging_fix": false,
-    "table_squeeze_fix": false,
-    "table_buttons_fix": false,
-    "boundaries_fix": false,
-    "scrolling_fix": false,
-    "smooth_relations": false,
-    "drag_scrolling": false,
+    "table_dragging_fix": true,
+    "table_squeeze_fix": true,
+    "table_buttons_fix": true,
+    "boundaries_fix": true,
+    "scrolling_fix": true,
+    "smooth_relations": true,
+    "drag_scrolling": true,
     "screenshot_mode": true,
-    "pages_porting": false
+    "pages_porting": true
 }
