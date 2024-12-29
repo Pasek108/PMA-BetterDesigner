@@ -55,7 +55,7 @@ This is
 > - Improvement for dragging relations
 
 
-## Setup
+## Installation
 - Download normal or minified release
 - Extract release zip 
 - Move it to the phpMyAdmin folder
