@@ -26,7 +26,7 @@ function applyTableButtonsFix() {
 // set paddings and cursors for all headers buttons
 function tableButtonsFix() {
   if (!BetterDesigner.isOnDesignerPage()) return
-  console.log("buttons fix")
+  // console.log("buttons fix")
 
   document.querySelectorAll("#canvas_outer .small_tab").forEach((elem) => {
     elem.style.cssText = `

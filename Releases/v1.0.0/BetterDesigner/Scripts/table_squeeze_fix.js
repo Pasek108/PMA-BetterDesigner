@@ -23,7 +23,7 @@ function applyTableSqueezeFix() {
 // set `white-space: nowrap` to all table headers
 function tableSqueezeFix() {
   if (!BetterDesigner.isOnDesignerPage()) return
-  console.log("table squezze fix")
+  // console.log("table squezze fix")
 
   document.querySelectorAll("#canvas_outer .tab_zag, #canvas_outer .tab_zag_2").forEach((elem) => {
     elem.style.cssText = `

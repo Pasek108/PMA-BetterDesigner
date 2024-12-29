@@ -30,7 +30,7 @@ function applyScrollingFix() {
 // set paddings and cursors for all headers buttons
 function scrollingFix() {
   if (!BetterDesigner.isOnDesignerPage()) return
-  console.log("scrolling fix")
+  // console.log("scrolling fix")
 
   // change target to drag
   BetterDesigner.canvas_node = document.querySelector("#canvas_outer")

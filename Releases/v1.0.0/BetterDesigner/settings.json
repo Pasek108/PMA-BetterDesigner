@@ -1,0 +1,11 @@
+{
+    "table_dragging_fix": true,
+    "table_squeeze_fix": true,
+    "table_buttons_fix": true,
+    "boundaries_fix": true,
+    "scrolling_fix": true,
+    "smooth_relations": true,
+    "drag_scrolling": true,
+    "screenshot_mode": true,
+    "pages_porting": true
+}

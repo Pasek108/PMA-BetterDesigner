@@ -8,7 +8,7 @@ class BetterDesigner {
   static modal = new Modal()
 
   static waitForDesigner() {
-    console.log("wait")
+    // console.log("wait")
     return new Promise((resolve) => {
       setTimeout(() => resolve(typeof DesignerMove != "undefined"), 1)
     })

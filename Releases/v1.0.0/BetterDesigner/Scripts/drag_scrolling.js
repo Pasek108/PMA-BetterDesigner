@@ -23,7 +23,7 @@ function applyDragScrolling() {
 
 function dragScrolling() {
   if (!BetterDesigner.isOnDesignerPage()) return
-  console.log("drag scrolling")
+  // console.log("drag scrolling")
 
   BetterDesigner.canvas_node = document.querySelector("#canvas_outer")
   BetterDesigner.canvas_node.style.setProperty("cursor", "grab", "important")
