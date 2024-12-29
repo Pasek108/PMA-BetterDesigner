@@ -32,12 +32,14 @@ function tableButtonsFix() {
     elem.style.cssText = `
       padding-left: 5px !important; 
       padding-right: 5px !important;
+      vertical-align: middle !important;
       cursor: pointer !important;
     `
   })
 
   document.querySelectorAll("#canvas_outer .small_tab_pref").forEach((elem) => {
     elem.style.cssText = `
+      vertical-align: middle !important;
       cursor: pointer !important;
     `
   })

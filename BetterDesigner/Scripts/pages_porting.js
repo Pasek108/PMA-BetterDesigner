@@ -3,15 +3,15 @@
 /*
 
 ------ PROBLEM ------  
-- You cant import or export designer pages and see or edit it elswere (not even other browser)
-- Sometimes even saved pages just disappear
+- You can't import or export designer pages, nor can you view or edit them elsewhere (not even in another browser).  
+- Sometimes, even saved pages randomly disappear.  
 
 ------ HOW TO REPLICATE ------  
-Save designer page and try to open it in other browser.
+Save a designer page and try to open it in another browser.  
 
 ------ FIX ------  
-Add button for opening widow that allows for exporting and importing designer pages 
- 
+Add a button to open a window that allows exporting and importing designer pages.  
+
 */
 
 function applyPagesPorting() {
