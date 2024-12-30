@@ -19,49 +19,81 @@
   * [Features](#features)
   * [Installation](#installation)
 * [Details :scroll:](#details-scroll)
-  * [User interface](#user-interface)
-  * [Matchstick representation](#matchstick-representation)
-  * [Equation generator](#equation-generator)
-  * [Project structure](#project-structure)
+  * [Settings](#settings)
+  * [table_dragging_fix](#table_dragging_fix)
+  * [table_squeeze_fix](#table_squeeze_fix)
+  * [table_buttons_fix](#table_buttons_fix)
+  * [boundaries_fix](#boundaries_fix)
+  * [scrolling_fix](#scrolling_fix)
+  * [smooth_relations](#smooth_relations)
+  * [drag_scrolling](#drag_scrolling)
+  * [screenshot_mode](#screenshot_mode)
+  * [pages_porting](#pages_porting)
 
 <br>
 
 # Overview :sparkles:
 
 ## About
-This is 
+The phpMyAdmin designer is a built-in tool for creating ERDs (Entity-Relationship Diagrams) for databases. However, several issues make it frustrating to use, and it lacks essential features, such as exporting saved pages. This project provides fixes and improvements to enhance its functionality, making it a more effective tool.
 
 <br>
 
 ## Features
-- Fix for dragging the table
-- Fix for the table squeezing on canvas border
-- Fix for the table buttons jumping on hover
-- Fix for dragging tables outside canvas boundaries 
-- Fix for scrolling the designer area
-- Fix for invisible relations when dragging the table
-- Improvement for scrolling the designer area with mouse
-- Improvement for screenshooting ERD
-- Improvement for importing and exporting designer pages
-- Each feature works on its own and can be disabled in `settings.json` file
-- Works with different themes
+- Fix - dragging tables  
+- Fix - table squeezing at canvas borders
+- Fix - table buttons shifting positions on hover
+- Fix - dragging tables outside canvas boundaries
+- Fix - scrolling issues in the designer area
+- Fix - invisible relations when dragging tables
+- New feature - scrolling the designer area using the mouse
+- New feature - enhanced ERD screenshot capabilities
+- New feature - importing and exporting designer pages
+- Each feature works independently and can be disabled in the `settings.json` file
+- Compatible with different themes
 
 <br>
 
 > [!NOTE]  
 > Room for improvements:
-> - Testing other versions of phpMyAdmin
-> - Testing other operating systems
-> - Improvement for dragging relations
+> - Testing compatibility with other phpMyAdmin versions
+> - Testing support for different operating systems
+> - New feature - dragging relations with the mouse
+> - New feature - changing relation colors
+> - New feature - option to make all tables the same size
+> - New feature - table style picker
 
 
 ## Installation
 - Download normal or minified release
-- Extract release zip 
-- Move it to the phpMyAdmin folder
+- Extract the downloaded release zip file
+- Move it to the `phpMyAdmin` folder
 
-If you have existing `config.header.inc.php` file: 
-- copy `config.header.inc.php` content from release
-- paste it on the top of your `phpMyAdmin/config.header.inc.php`
+If you have an existing `config.header.inc.php` file: 
+- Copy `config.header.inc.php` content from release
+- Paste it at the top of your existing `phpMyAdmin/config.header.inc.php`
 
 <br> 
+
+# Details :scroll:
+
+## Settings
+
+## table_dragging_fix
+
+## table_squeeze_fix
+
+## table_buttons_fix
+
+## boundaries_fix
+
+## scrolling_fix
+
+## smooth_relations
+
+## drag_scrolling
+
+## screenshot_mode
+
+## pages_porting
+
