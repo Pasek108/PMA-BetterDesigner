@@ -91,7 +91,7 @@ If you have an existing `config.header.inc.php` file:
 Grab and drag the table quickly, release the mouse button, then try to catch the table or grab another one.  
 
 ### Fix 
-Change the event targets of dragging events. 
+Changed the event targets of dragging events. 
 
 
 ## table_squeeze_fix
@@ -103,7 +103,7 @@ Table headers are squeezed to match the length of the longest row when moved out
 Grab and drag a table with header text longer than the longest text in its rows to the right.  
 
 ### Fix 
-Prevent header text from breaking into multiple lines.  
+Prevented header text from breaking into multiple lines.  
 
 
 ## table_buttons_fix
@@ -114,10 +114,10 @@ Prevent header text from breaking into multiple lines.
 
 ### How to replicate   
 - Hover over the table buttons located to the left of the header.  
-- Cause table squeeze (table_squeeze_fix.js) and hover over the buttons again.  
+- Cause table squeeze and hover over the buttons again.  
 
 ### Fix  
-Set consistent padding for the toggle columns button and apply pointer cursors to both. 
+Set consistent paddings, align and pointer cursors for the table buttons. 
 
 
 ## boundaries_fix
@@ -131,7 +131,7 @@ Set consistent padding for the toggle columns button and apply pointer cursors t
 - On the left boundary, keep dragging the table further left and then try dragging it back.  
 
 ### Fix    
-Adjust the conditions for setting the lower bound of the table position.  
+Adjusted the conditions for setting the lower bound of the table position.  
 
 
 ## scrolling_fix
@@ -147,10 +147,10 @@ Grab and drag a table to the bottom-right corner, then:
 - Scroll the page to the bottom-right corner and try dragging the table back.  
 
 ### Fix 
-- Add styles to the designer to restrict scrolling to the canvas area.  
-- Add styles to the console to allow dragging the bottom scrollbar.  
-- Adjust the canvas area size when collapsing or resizing the navigation panel.  
-- Update the canvas area size when switching to fullscreen mode.  
+- Added styles to the designer to restrict scrolling to the canvas area.  
+- Added styles to the console to allow dragging the bottom scrollbar.  
+- Adjusted the canvas area size when collapsing or resizing the navigation panel.  
+- Updateed the canvas area size when switching to fullscreen mode.  
 
 
 ## smooth_relations
@@ -162,11 +162,7 @@ When a table is dragged, the relations are not displayed or updated.
 Grab and drag the table.  
 
 ### Fix  
-Stop hiding the canvas and reload relations when dragging the table.  
-
-`DesignerMove.markUnsaved` is used instead of `DesignerMove.mouseMove` because:  
-- `DesignerMove.mouseMove` is used by another fix (boundaries_fix.js).  
-- `DesignerMove.markUnsaved` is smaller and is called during every `DesignerMove.mouseMove`. 
+Disableed hiding the canvas and added reload relations when dragging the table.  
 
 
 ## drag_scrolling
@@ -179,7 +175,8 @@ Stop hiding the canvas and reload relations when dragging the table.
 Press and hold the left mouse button, then try to move the canvas area.  
 
 ### Fix  
-Implement drag-scrolling events for smoother navigation.  
+- Implemented drag-scrolling events for canvas and window.
+- Added events for fullscreen opeion and resizing navigation
 
 
 ## screenshot_mode
@@ -193,11 +190,10 @@ There are two ways to export the ERD:
 Try to save the ERD image.  
 
 ### Fix 
-Add button for displaying only canvas on fullscreen, allowing screenshots of arbitrarily large ERDs while preserving 
+Added button for displaying only canvas on fullscreen, allowing screenshots of arbitrarily large ERDs while preserving 
 the same theme and relation styles as displayed.  
 
 How to Take a Screenshot:
-
 - Chrome / Edge: 
   1\. Install the [GoFullPage Chrome](https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl)/[GoFullPage Edge](https://microsoftedge.microsoft.com/addons/detail/gofullpage-full-page-sc/hfaciehifhdcgoolaejkoncjciicbemc) extension.  
   2\. Open screenshot mode.  
@@ -225,6 +221,6 @@ How to Take a Screenshot:
 Save a designer page and try to open it in another browser.  
 
 ### Fix 
-Add a button to open a window that allows exporting and importing designer pages.
+Added button to open a window that allows exporting and importing designer pages.
 
 
