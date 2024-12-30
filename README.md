@@ -13,6 +13,8 @@
 -->
 <br>
 
+<!--
+
 # Table of Contents
 * [Overview :sparkles:](#overview-sparkles)
   * [About](#about)
@@ -28,7 +30,7 @@
   * [drag_scrolling](#drag_scrolling)
   * [screenshot_mode](#screenshot_mode)
   * [pages_porting](#pages_porting)
-
+-->
 <br>
 
 # Overview :sparkles:
@@ -75,6 +77,8 @@ If you have an existing `config.header.inc.php` file:
 - Paste it at the top of your existing `phpMyAdmin/config.header.inc.php`
 
 <br> 
+
+<!--
 
 # Details :scroll:
 
@@ -223,4 +227,4 @@ Save a designer page and try to open it in another browser.
 ### Fix 
 Added button to open a window that allows exporting and importing designer pages.
 
-
+-->
