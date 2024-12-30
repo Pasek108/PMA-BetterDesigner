@@ -13,7 +13,7 @@
 Grab and drag the table quickly, release the mouse button, then try to catch the table or grab another one.  
 
 ------ FIX ------  
-Change the event targets of dragging events.  
+Changeed the event targets of dragging events.  
 
 */
 

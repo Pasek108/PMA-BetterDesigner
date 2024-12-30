@@ -10,7 +10,7 @@
 Save a designer page and try to open it in another browser.  
 
 ------ FIX ------  
-Add a button to open a window that allows exporting and importing designer pages.  
+Added a button to open a window that allows exporting and importing designer pages.  
 
 */
 

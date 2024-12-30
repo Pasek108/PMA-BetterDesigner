@@ -10,7 +10,7 @@
 Press and hold the left mouse button, then try to move the canvas area.  
 
 ------ FIX ------  
-Implement drag-scrolling events for smoother navigation.  
+Implemented drag-scrolling events for smoother navigation.  
 
 */
 

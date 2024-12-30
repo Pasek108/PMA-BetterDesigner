@@ -12,7 +12,7 @@
 - Cause table squeeze (table_squeeze_fix.js) and hover over the buttons again.  
 
 ------ FIX ------  
-Set consistent padding for the toggle columns button and apply pointer cursors to both.  
+Set consistent paddings, align and pointer cursors for the table buttons. 
  
 */
 

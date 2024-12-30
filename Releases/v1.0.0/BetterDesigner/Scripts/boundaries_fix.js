@@ -11,7 +11,7 @@
 - On the left boundary, keep dragging the table further left and then try dragging it back.  
 
 ------ FIX ------  
-Adjust the conditions for setting the lower bound of the table position.  
+Adjusted the conditions for setting the lower bound of the table position.  
  
 */
 

@@ -13,10 +13,11 @@ Grab and drag a table to the bottom-right corner, then:
 - Scroll the page to the bottom-right corner and try dragging the table back.  
 
 ------ FIX ------  
-- Add styles to the designer to restrict scrolling to the canvas area.  
-- Add styles to the console to allow dragging the bottom scrollbar.  
-- Adjust the canvas area size when collapsing or resizing the navigation panel.  
-- Update the canvas area size when switching to fullscreen mode.  
+- Added styles to the designer to restrict scrolling to the canvas area.  
+- Added styles to the console to allow dragging the bottom scrollbar.  
+- Adjusted the canvas area size when collapsing or resizing the navigation panel.  
+- Updateed the canvas area size when switching to fullscreen mode.  
+- Added events for fullscreen opeion and resizing navigation.
 
 */
 

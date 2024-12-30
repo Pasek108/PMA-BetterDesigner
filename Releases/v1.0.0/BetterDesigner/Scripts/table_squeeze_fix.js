@@ -9,7 +9,7 @@ Table headers are squeezed to match the length of the longest row when moved out
 Grab and drag a table with header text longer than the longest text in its rows to the right.  
 
 ------ FIX ------  
-Prevent header text from breaking into multiple lines.  
+Prevented header text from breaking into multiple lines.  
  
 */
 

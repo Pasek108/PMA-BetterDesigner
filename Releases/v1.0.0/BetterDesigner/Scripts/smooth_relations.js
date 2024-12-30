@@ -9,7 +9,7 @@ When a table is dragged, the relations are not displayed or updated.
 Grab and drag the table.  
 
 ------ FIX ------  
-Stop hiding the canvas and reload relations when dragging the table.  
+Disabled hiding the canvas and added reload relations when dragging the table.    
 
 `DesignerMove.markUnsaved` is used instead of `DesignerMove.mouseMove` because:  
 - `DesignerMove.mouseMove` is used by another fix (boundaries_fix.js).  

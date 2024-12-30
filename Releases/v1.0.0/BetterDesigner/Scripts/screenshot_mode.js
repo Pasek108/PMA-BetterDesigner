@@ -11,7 +11,7 @@ There are two ways to export the ERD:
 Try to save the ERD image.  
 
 ------ FIX ------  
-Add button for displaying only canvas on fullscreen, allowing screenshots of arbitrarily large ERDs while preserving 
+Added button for displaying only canvas on fullscreen, allowing screenshots of arbitrarily large ERDs while preserving 
 the same theme and relation styles as displayed.  
 
 How to Take a Screenshot:
