@@ -80,8 +80,6 @@ If you have an existing `config.header.inc.php` file:
 
 ## table_dragging_fix
 
-<img src="/_for_readme/Arduino/wokwi_cropped.gif" alt="arduino wokwi gif" width="100%">
-
 ### Problem 
 - When the cursor moves outside the dragged table, it stops moving.  
 - When the cursor is released outside the dragged table:  
@@ -95,12 +93,8 @@ Grab and drag the table quickly, release the mouse button, then try to catch the
 ### Fix 
 Change the event targets of dragging events. 
 
-<img src="/_for_readme/Arduino/wokwi_cropped.gif" alt="arduino wokwi gif" width="100%">
-
 
 ## table_squeeze_fix
-
-<img src="/_for_readme/Arduino/wokwi_cropped.gif" alt="arduino wokwi gif" width="100%">
 
 ### Problem  
 Table headers are squeezed to match the length of the longest row when moved outside the right boundary of the canvas.  
@@ -110,8 +104,6 @@ Grab and drag a table with header text longer than the longest text in its rows 
 
 ### Fix 
 Prevent header text from breaking into multiple lines.  
-
-<img src="/_for_readme/Arduino/wokwi_cropped.gif" alt="arduino wokwi gif" width="100%">
 
 
 ## table_buttons_fix
@@ -130,8 +122,6 @@ Set consistent padding for the toggle columns button and apply pointer cursors t
 
 ## boundaries_fix
 
-<img src="/_for_readme/Arduino/wokwi_cropped.gif" alt="arduino wokwi gif" width="100%">
-
 ### Problem    
 - The table can be dragged outside the canvas in the top-left corner.  
 - The table can be dragged to negative values while visually remaining in place.  
@@ -143,12 +133,8 @@ Set consistent padding for the toggle columns button and apply pointer cursors t
 ### Fix    
 Adjust the conditions for setting the lower bound of the table position.  
 
-<img src="/_for_readme/Arduino/wokwi_cropped.gif" alt="arduino wokwi gif" width="100%">
-
 
 ## scrolling_fix
-
-<img src="/_for_readme/Arduino/wokwi_cropped.gif" alt="arduino wokwi gif" width="100%">
 
 ### Problem  
 The entire page scrolls, causing the following issues:  
@@ -166,12 +152,8 @@ Grab and drag a table to the bottom-right corner, then:
 - Adjust the canvas area size when collapsing or resizing the navigation panel.  
 - Update the canvas area size when switching to fullscreen mode.  
 
-<img src="/_for_readme/Arduino/wokwi_cropped.gif" alt="arduino wokwi gif" width="100%">
-
 
 ## smooth_relations
-
-<img src="/_for_readme/Arduino/wokwi_cropped.gif" alt="arduino wokwi gif" width="100%">
 
 ### Problem  
 When a table is dragged, the relations are not displayed or updated.  
@@ -186,12 +168,8 @@ Stop hiding the canvas and reload relations when dragging the table.
 - `DesignerMove.mouseMove` is used by another fix (boundaries_fix.js).  
 - `DesignerMove.markUnsaved` is smaller and is called during every `DesignerMove.mouseMove`. 
 
-<img src="/_for_readme/Arduino/wokwi_cropped.gif" alt="arduino wokwi gif" width="100%">
-
 
 ## drag_scrolling
-
-<img src="/_for_readme/Arduino/wokwi_cropped.gif" alt="arduino wokwi gif" width="100%">
 
 ### Problem   
 - Navigating the designer area using scrollbars or the middle mouse button is difficult.  
@@ -203,12 +181,8 @@ Press and hold the left mouse button, then try to move the canvas area.
 ### Fix  
 Implement drag-scrolling events for smoother navigation.  
 
-<img src="/_for_readme/Arduino/wokwi_cropped.gif" alt="arduino wokwi gif" width="100%">
-
 
 ## screenshot_mode
-
-<img src="/_for_readme/Arduino/wokwi_cropped.gif" alt="arduino wokwi gif" width="100%">
 
 ### Problem  
 There are two ways to export the ERD:  
@@ -221,8 +195,6 @@ Try to save the ERD image.
 ### Fix 
 Add button for displaying only canvas on fullscreen, allowing screenshots of arbitrarily large ERDs while preserving 
 the same theme and relation styles as displayed.  
-
-<img src="/_for_readme/Arduino/wokwi_cropped.gif" alt="arduino wokwi gif" width="100%">
 
 How to Take a Screenshot:
 
@@ -245,8 +217,6 @@ How to Take a Screenshot:
 
 ## pages_porting
 
-<img src="/_for_readme/Arduino/wokwi_cropped.gif" alt="arduino wokwi gif" width="100%">
-
 ### Problem    
 - You can't import or export designer pages, nor can you view or edit them elsewhere (not even in another browser).  
 - Sometimes, even saved pages randomly disappear.  
@@ -256,7 +226,5 @@ Save a designer page and try to open it in another browser.
 
 ### Fix 
 Add a button to open a window that allows exporting and importing designer pages.
-
-<img src="/_for_readme/Arduino/wokwi_cropped.gif" alt="arduino wokwi gif" width="100%">
 
 
