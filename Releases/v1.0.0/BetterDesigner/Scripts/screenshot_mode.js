@@ -17,7 +17,7 @@ the same theme and relation styles as displayed.
 How to Take a Screenshot:
 
 - Chrome / Edge: 
-  1. Install the [GoFullPage](https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl) extension.  
+  1. Install the [GoFullPage](https://gofullpage.com) extension.  
   2. Open screenshot mode.  
   3. Click the GoFullPage extension icon and save your ERD.  
 

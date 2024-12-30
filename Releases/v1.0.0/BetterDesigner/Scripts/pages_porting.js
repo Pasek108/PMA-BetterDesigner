@@ -121,10 +121,10 @@ function importPages() {
         const current_database = import_data[storeNames[0]][0].dbName
 
         transaction.oncomplete = () => alert(`Pages for '${current_database}' databse imported.`)
-        transaction.onerror = (evt) => // console.log("Data import failed:", evt.target.error)
+        transaction.onerror = (evt) => console.log("Data import failed:", evt.target.error)
       }
 
-      connection.onerror = (event) => // console.log("Failed to open IndexedDB:", event.target.error)
+      connection.onerror = (event) => console.log("Failed to open IndexedDB:", event.target.error)
     }
 
     reader.readAsText(file.files[0])
