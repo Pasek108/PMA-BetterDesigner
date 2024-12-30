@@ -47,7 +47,7 @@ The phpMyAdmin designer is a built-in tool for creating ERDs (Entity-Relationshi
 - Fix - scrolling issues in the designer area
 - Fix - invisible relations when dragging tables
 - New feature - scrolling the designer area using the mouse
-- New feature - enhanced ERD screenshot capabilities
+- New feature - screenshot mode for saving full ERD with [GoFullPage](https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl) or Firefox [full page screenshot](https://support.mozilla.org/en-US/kb/take-screenshots-firefox) 
 - New feature - importing and exporting designer pages
 - Each feature works independently and can be disabled in the `settings.json` file
 - Compatible with different themes
