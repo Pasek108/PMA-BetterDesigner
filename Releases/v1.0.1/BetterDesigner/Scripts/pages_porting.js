@@ -25,6 +25,11 @@ function pagesPorting() {
   if (!BetterDesigner.isOnDesignerPage()) return
   // console.log("pages porting")
 
+  // check if modal exist
+  if (document.querySelectorAll(".better-designer-modal").length < 1) {
+    BetterDesigner.modal = new Modal()
+  }
+
   // check if button exist
   const name_panel = document.querySelector("#name-panel")
   if (name_panel.querySelectorAll(".porting").length > 0) return

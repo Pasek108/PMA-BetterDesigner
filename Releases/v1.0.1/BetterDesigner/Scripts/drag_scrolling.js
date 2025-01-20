@@ -33,6 +33,8 @@ function dragScrolling() {
 function mouseDownHandler(e) {
   if (BetterDesigner.canvas_node == null) return
 
+  document.body.style.userSelect = "none";
+
   BetterDesigner.drag_position = {
     left: BetterDesigner.drag_target == window ? window.scrollX : BetterDesigner.drag_target.scrollLeft,
     top: BetterDesigner.drag_target == window ? window.scrollY : BetterDesigner.drag_target.scrollTop,
@@ -59,6 +61,8 @@ function mouseMoveHandler(e) {
 }
 
 function mouseUpHandler() {
+  document.body.style.userSelect = null;
+
   document.removeEventListener("mousemove", mouseMoveHandler)
   document.removeEventListener("mouseup", mouseUpHandler)
 }

@@ -43,7 +43,12 @@ function applyScreenshotMode() {
 
 function screenshotMode() {
   if (!BetterDesigner.isOnDesignerPage()) return
-  console.log("screenshot mode")
+  // console.log("screenshot mode")
+
+  // check if modal exist
+  if (document.querySelectorAll(".better-designer-modal").length < 1) {
+    BetterDesigner.modal = new Modal()
+  }
 
   // check if button exist
   const name_panel = document.querySelector("#name-panel")
@@ -75,6 +80,7 @@ function openScreenshotMode() {
   BetterDesigner.drag_target = window
 
   document.body.style.overflow = null
+  document.querySelector("#canvas.designer").style.paddingRight = "10rem";
   document.querySelector("#canvas_outer").style.cssText = `
     position: absolute !important;
     top: 0 !important;
@@ -99,6 +105,7 @@ function closeScreenshotMode(e) {
   const name_panel_height = $("#name-panel").innerHeight()
 
   document.body.style.overflow = "hidden !important"
+  document.querySelector("#canvas.designer").style.paddingRight = null;
   document.querySelector("#canvas_outer").style.cssText = `
     overflow: scroll !important;
     width: calc(100vw - ${navigation_width + 3}px) !important;

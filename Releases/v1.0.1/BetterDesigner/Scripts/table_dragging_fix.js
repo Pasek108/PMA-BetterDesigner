@@ -18,7 +18,7 @@ Changeed the event targets of dragging events.
 */
 
 async function applyTableDraggingFix() {
-  console.log("table dragging")
+  // console.log("table dragging")
   const is_loaded = await BetterDesigner.waitForDesigner()
 
   if (!is_loaded) applyTableDraggingFix()
@@ -34,7 +34,7 @@ function changedEnablePageContentEvents() {
   $("#page_content").off("mouseup")
   $("#page_content").off("mousemove")
 
-  $(document).on("mousedown", function (e) { DesignerMove.mouseDown(e) })
-  $(document).on("mouseup",   function (e) { DesignerMove.mouseUp(e)   })
+  $(document).on("mousedown", function (e) { document.body.style.userSelect = "none"; DesignerMove.mouseDown(e) })
+  $(document).on("mouseup",   function (e) { document.body.style.userSelect = null;   DesignerMove.mouseUp(e)   })
   $(document).on("mousemove", function (e) { DesignerMove.mouseMove(e) })
 }
