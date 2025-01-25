@@ -44,6 +44,11 @@ This project was developed and tested with phpMyAdmin 5.2.1 in the XAMPP package
 
 <br>
 
+## Installation
+1. Download and extract the release zip file.  
+2. Navigate to the `v1.x.y.min` folder and copy its contents (`config.header.inc.php` file and `BetterDesigner` folder).  
+3. Paste the copied contents into your `phpMyAdmin` folder (e.g. `C:\xampp\phpMyAdmin`).  
+
 ## Features
 - Fix - dragging tables  
 - Fix - table squeezing at canvas borders
@@ -70,10 +75,6 @@ This project was developed and tested with phpMyAdmin 5.2.1 in the XAMPP package
 > - New feature - changing relation colors
 
 
-## Installation
-1. Download and extract the release zip file.  
-2. Navigate to the `v1.x.y.min` folder and copy its contents (`config.header.inc.php` file and `BetterDesigner` folder).  
-3. Paste the copied contents into your `phpMyAdmin` folder (e.g. `C:\xampp\phpMyAdmin`).  
 
 ## Acknowledgements
 - [Flaticon - camera icon](https://www.flaticon.com/free-icon/dslr-camera_83574?term=camera&page=1&position=8&origin=tag&related_id=83574)
