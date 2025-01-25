@@ -71,8 +71,8 @@ This project was developed and tested with phpMyAdmin 5.2.1 in the XAMPP package
 
 
 ## Installation
-1. Download and extract the `v1.1.0.min` zip file.  
-2. Navigate to the `v1.1.0.min` folder and copy its contents (`config.header.inc.php` file and `BetterDesigner` folder).  
+1. Download and extract the release zip file.  
+2. Navigate to the `v1.x.y.min` folder and copy its contents (`config.header.inc.php` file and `BetterDesigner` folder).  
 3. Paste the copied contents into your `phpMyAdmin` folder (e.g. `C:\xampp\phpMyAdmin`).  
 
 ## Acknowledgements
