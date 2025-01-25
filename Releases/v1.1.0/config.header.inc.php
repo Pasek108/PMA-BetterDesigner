@@ -5,6 +5,7 @@
 <script src="BetterDesigner/Scripts/scrolling_fix.js"></script>
 <script src="BetterDesigner/Scripts/smooth_relations.js"></script>
 <script src="BetterDesigner/Scripts/drag_scrolling.js"></script>
+<script src="BetterDesigner/Scripts/zooming.js"></script>
 <script src="BetterDesigner/Scripts/screenshot_mode.js"></script>
 <script src="BetterDesigner/Scripts/pages_porting.js"></script>
 

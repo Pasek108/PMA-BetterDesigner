@@ -38,7 +38,7 @@ function applyScreenshotMode() {
   screenshotMode()
 
   const observer = new MutationObserver(screenshotMode)
-  observer.observe(document.querySelector("#page_content"), { childList: true })
+  observer.observe(BetterDesigner.page_content, { childList: true })
 }
 
 function screenshotMode() {
@@ -80,7 +80,10 @@ function openScreenshotMode() {
   BetterDesigner.drag_target = window
 
   document.body.style.overflow = null
-  document.querySelector("#canvas.designer").style.paddingRight = "10rem";
+  document.body.style.backgroundColor = "white"
+  document.querySelectorAll('body > *:not(#page_content):not(.better-designer-modal)').forEach(elem => elem.style.display = "none")
+  document.querySelector('#name-panel').style.display = "none"
+  document.querySelector('#side_menu').style.display = "none"
   document.querySelector("#canvas_outer").style.cssText = `
     position: absolute !important;
     top: 0 !important;
@@ -88,7 +91,6 @@ function openScreenshotMode() {
     z-index: 999 !important;
     min-width: 100vw !important;
     min-height: 100vh !important;
-    background: white !important;
   `
   if (BetterDesigner.settings.drag_scrolling) BetterDesigner.canvas_node.style.setProperty("cursor", "grab", "important")
 
@@ -105,7 +107,10 @@ function closeScreenshotMode(e) {
   const name_panel_height = $("#name-panel").innerHeight()
 
   document.body.style.overflow = "hidden !important"
-  document.querySelector("#canvas.designer").style.paddingRight = null;
+  document.body.style.backgroundColor = null
+  document.querySelectorAll('body > *:not(#page_content):not(.better-designer-modal)').forEach(elem => elem.style.display = null)
+  document.querySelector('#name-panel').style.display = null
+  document.querySelector('#side_menu').style.display = null
   document.querySelector("#canvas_outer").style.cssText = `
     overflow: scroll !important;
     width: calc(100vw - ${navigation_width + 3}px) !important;

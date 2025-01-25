@@ -20,7 +20,7 @@ function applyTableButtonsFix() {
   tableButtonsFix()
 
   const observer = new MutationObserver(tableButtonsFix)
-  observer.observe(document.querySelector("#page_content"), { childList: true })
+  observer.observe(BetterDesigner.page_content, { childList: true })
 }
 
 // set paddings and cursors for all headers buttons

@@ -25,7 +25,7 @@ function applyScrollingFix() {
   scrollingFix()
 
   const observer = new MutationObserver(scrollingFix)
-  observer.observe(document.querySelector("#page_content"), { childList: true })
+  observer.observe(BetterDesigner.page_content, { childList: true })
 }
 
 // set paddings and cursors for all headers buttons
@@ -47,7 +47,7 @@ function scrollingFix() {
 
   // fullscreen
   const observer = new MutationObserver(toggleFullscreen)
-  observer.observe(document.querySelector("#page_content"), { attributes: true, attributeFilter: ["class"] })
+  observer.observe(BetterDesigner.page_content, { attributes: true, attributeFilter: ["class"] })
 
   // change styles
   let navigation_width = $("#pma_navigation").innerWidth()
@@ -62,7 +62,7 @@ function scrollingFix() {
   `
 
   // styles for designer canvas area
-  document.querySelector("#page_content").style.cssText = `
+  BetterDesigner.page_content.style.cssText = `
     overflow: hidden !important;
     width: calc(100vw - ${navigation_width + 3}px) !important;
     height: calc(100vh - ${menubar_height}px) !important;
@@ -119,7 +119,7 @@ function resizeNavigation() {
   `
   if (BetterDesigner.settings.drag_scrolling) BetterDesigner.canvas_node.style.setProperty("cursor", "grab", "important")
 
-  document.querySelector("#page_content").style.cssText = `
+  BetterDesigner.page_content.style.cssText = `
     overflow: hidden !important;
     width: calc(100vw - ${navigation_width + 3}px) !important;
     height: calc(100vh - ${menubar_height}px) !important;
@@ -139,7 +139,7 @@ function toggleFullscreen() {
   const screenshot_mode_button = name_panel.querySelector(".screenshot")
 
   setTimeout(() => {
-    const page_content = document.querySelector("#page_content")
+    const page_content = BetterDesigner.page_content
 
     let navigation_width = $("#pma_navigation").innerWidth()
     let menubar_height = $("#floating_menubar").innerHeight()

@@ -18,7 +18,7 @@ function applyPagesPorting() {
   pagesPorting()
 
   const observer = new MutationObserver(pagesPorting)
-  observer.observe(document.querySelector("#page_content"), { childList: true })
+  observer.observe(BetterDesigner.page_content, { childList: true })
 }
 
 function pagesPorting() {

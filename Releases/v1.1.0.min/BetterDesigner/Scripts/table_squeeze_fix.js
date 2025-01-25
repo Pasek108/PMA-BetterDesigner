@@ -1,0 +1,1 @@
+"use strict";function applyTableSqueezeFix(){tableSqueezeFix();new MutationObserver(tableSqueezeFix).observe(BetterDesigner.page_content,{childList:1})}function tableSqueezeFix(){BetterDesigner.isOnDesignerPage()&&document.querySelectorAll("#canvas_outer .tab_zag, #canvas_outer .tab_zag_2").forEach((e=>{e.style.cssText="\n      white-space: nowrap !important;\n    "}))}

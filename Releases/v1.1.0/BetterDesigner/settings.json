@@ -6,6 +6,7 @@
     "scrolling_fix": true,
     "smooth_relations": true,
     "drag_scrolling": true,
+    "zooming": true,
     "screenshot_mode": true,
     "pages_porting": true
 }

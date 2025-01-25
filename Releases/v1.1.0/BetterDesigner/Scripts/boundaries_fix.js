@@ -39,8 +39,8 @@ function changedMouseMove(e) {
     var $curClick = $(curClick)
     var curX = parseFloat($curClick.attr("data-" + mainDirection) || $curClick.css(mainDirection))
     var curY = parseFloat($curClick.attr("data-top") || $curClick.css("top"))
-    var newX = curX - directionEffect * deltaX
-    var newY = curY - deltaY
+    var newX = curX - directionEffect * (deltaX * (1 / BetterDesigner.zoom_value))
+    var newY = curY - deltaY * (1 / BetterDesigner.zoom_value)
 
     // deleted "else" and moved higher
     if (newX < 0) newX = 0

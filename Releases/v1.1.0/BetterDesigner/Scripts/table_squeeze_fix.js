@@ -17,7 +17,7 @@ function applyTableSqueezeFix() {
   tableSqueezeFix()
 
   const observer = new MutationObserver(tableSqueezeFix)
-  observer.observe(document.querySelector("#page_content"), { childList: true })
+  observer.observe(BetterDesigner.page_content, { childList: true })
 }
 
 // set `white-space: nowrap` to all table headers

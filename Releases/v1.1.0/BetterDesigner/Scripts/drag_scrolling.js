@@ -7,7 +7,7 @@
 - The ability to drag tables creates an expectation that the entire area can be dragged to move.  
 
 ------ HOW TO REPLICATE ------  
-Press and hold the left mouse button, then try to move the canvas area.  
+Try to move the canvas area by dragging your mouse.  
 
 ------ FIX ------  
 Implemented drag-scrolling events for smoother navigation.  
@@ -18,7 +18,7 @@ function applyDragScrolling() {
   dragScrolling()
 
   const observer = new MutationObserver(dragScrolling)
-  observer.observe(document.querySelector("#page_content"), { childList: true })
+  observer.observe(BetterDesigner.page_content, { childList: true })
 }
 
 function dragScrolling() {
