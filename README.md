@@ -51,7 +51,8 @@ This project was developed and tested with phpMyAdmin 5.2.1 in the XAMPP package
 - Fix - dragging tables outside canvas boundaries
 - Fix - scrolling issues in the designer area
 - Fix - invisible relations when dragging tables
-- New feature - scrolling the designer area using the mouse
+- New feature - scrolling the designer area by dragging the mouse
+- New feature - zooming the designer area using mouse wheel while holding the Alt key
 - New feature - screenshot mode for saving full ERD with [GoFullPage](https://gofullpage.com) or Firefox [full page screenshot](https://support.mozilla.org/en-US/kb/take-screenshots-firefox) 
 - New feature - importing and exporting designer pages
 - Each feature works independently and can be disabled in the `settings.json` file
@@ -63,10 +64,10 @@ This project was developed and tested with phpMyAdmin 5.2.1 in the XAMPP package
 > Room for improvements:
 > - Testing compatibility with other phpMyAdmin versions
 > - Testing support for different operating systems
-> - New feature - dragging relations with the mouse
-> - New feature - changing relation colors
 > - New feature - option to make all tables the same size
 > - New feature - table style picker
+> - New feature - dragging relations with the mouse
+> - New feature - changing relation colors
 
 
 ## Installation
@@ -77,6 +78,13 @@ This project was developed and tested with phpMyAdmin 5.2.1 in the XAMPP package
 If you have an existing `config.header.inc.php` file: 
 - Copy `config.header.inc.php` content from release
 - Paste it at the top of your existing `phpMyAdmin/config.header.inc.php`
+
+## Acknowledgements
+- [Flaticon - camera icon](https://www.flaticon.com/free-icon/dslr-camera_83574?term=camera&page=1&position=8&origin=tag&related_id=83574)
+- [Flaticon - Porting icon](https://www.flaticon.com/free-icon/distribution_8882845?term=import+export&page=1&position=42&origin=search&related_id=8882845)
+- [Flaticon - Close icon](https://www.flaticon.com/free-icon/close_2976286?term=close&page=1&position=2&origin=search&related_id=2976286)
+- [Stack Overflow - How to save designer pages in phpmyadmin](https://stackoverflow.com/a/78842891/13277499)
+- [Phuoc Nguyen - Drag to scroll](https://phuoc.ng/collection/html-dom/drag-to-scroll/)
 
 <br> 
 
