@@ -71,13 +71,9 @@ This project was developed and tested with phpMyAdmin 5.2.1 in the XAMPP package
 
 
 ## Installation
-- Download normal or minified release
-- Extract the downloaded release zip file
-- Move it to the `phpMyAdmin` folder
-
-If you have an existing `config.header.inc.php` file: 
-- Copy `config.header.inc.php` content from release
-- Paste it at the top of your existing `phpMyAdmin/config.header.inc.php`
+1. Download and extract the `v1.1.0.min` zip file.  
+2. Navigate to the `v1.1.0.min` folder and copy its contents (`config.header.inc.php` file and `BetterDesigner` folder).  
+3. Paste the copied contents into your `phpMyAdmin` folder (e.g. `C:\xampp\phpMyAdmin`).  
 
 ## Acknowledgements
 - [Flaticon - camera icon](https://www.flaticon.com/free-icon/dslr-camera_83574?term=camera&page=1&position=8&origin=tag&related_id=83574)
